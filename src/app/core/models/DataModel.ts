@@ -8,5 +8,4 @@ export interface DataModel {
 
   logMe();
   create();
-
 }

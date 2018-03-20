@@ -43,7 +43,7 @@ export class Person implements DataModel {
     console.log('logMe: ', this);
   }
 
-  // Create function will:
+  // Create function can:
   // - instantiate initial values when creating new Person from scratch
   // - return converted database ready object from existing Person values
   create() {
