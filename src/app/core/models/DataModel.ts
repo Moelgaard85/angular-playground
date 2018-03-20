@@ -4,8 +4,9 @@ export interface DataModel {
   description?: string;
   createdAt?: Date;
   updatedAt?: Date;
-  template?: any;
-  [x: string]: any;
+  [prop: string]: any;
 
-  convertToDatabaseModel();
+  logMe();
+  create();
+
 }
