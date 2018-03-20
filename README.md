@@ -1,20 +1,7 @@
 # Angular Starter
-Angular 5 starter application ready to use with best practice structure and often used libraries.
+Angular 5 playground for testing and trying out different technoligies etc.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
-
-## Structure
-* Core module setup for global models, services etc.
-* Routing module
-* Guard for routes
-* Using SCSS
-
-## Ready to use with following libraries
-* Bootstrap v4
-* NG-Bootstrap
-* Fontawesome 4.7
-* Moment.js
-* Lodash 4.17
 
 ## Installation
 Install node modules `npm i`
