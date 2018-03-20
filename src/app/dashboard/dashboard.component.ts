@@ -17,25 +17,21 @@ export class DashboardComponent implements OnInit {
     // *** Interfaces and Classes - See Person.ts ***
 
     // **New Person with custom existing data
-    // const person1Database = {
-    //   custom: 2,
-    //   id: 'sdfsdfsd',
-    //   title: 'dsfdsf',
-    //   createdAt: new Date(),
-    //   firstname: 'Test',
-    //   age: 22
-    // };
-    // const person1 = new Person(person1Database);
-    // person1.logMe();
-    // const person1Converted = person1.create();
-    // console.log('person1Converted: ', person1Converted);
+    const person1Database = {
+      custom: 2,
+      id: 'sdfsdfsd',
+      title: 'dsfdsf',
+      createdAt: new Date(),
+      firstname: 'Test',
+      age: 22
+    };
+    const person1 = new Person(person1Database);
+    person1.logMe();
 
     // **New Person with no initial data
     // const person2 = new Person();
-    // person2.logMe();
     // person2.firstname = 'Jens';
-    // const person2Converted = person2.create();
-    // console.log('person2Converted: ', person2Converted);
+    // person2.logMe();
 
     // **New Person with wrong data
     // const person3 = new Person({ firstname: 1 });

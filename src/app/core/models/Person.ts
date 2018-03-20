@@ -30,8 +30,8 @@ export class Person implements DataModel {
   // Instantiating new Person *can* take data. If data exists, it must follow IPerson interface.
   constructor(data?: IPerson) {
     if (data) {
-      // If data exists, assign it to the Person
-      Object.assign(this, data);
+      // If data exists, assign it to the Person using create function with data
+      Object.assign(this, this.create(data));
     } else {
       // If no data exists, then use the create function to create initial data
       Object.assign(this, this.create());
@@ -44,20 +44,23 @@ export class Person implements DataModel {
   }
 
   // Create function can:
-  // - instantiate initial values when creating new Person from scratch
-  // - return converted database ready object from existing Person values
-  create() {
+  // - instantiate initial values when creating new Person from scratch with or without data
+  create(data?) {
     return {
-      id: this.id ? this.id : null,
-      title: this.title ? this.title : '',
-      description: this.description ? this.description : '',
-      createdAt: this.createdAt ? this.createdAt : new Date(),
+      id: data && data.id ? data.id : null,
+      title: data && data.title ? data.title : '',
+      description: data && data.description ? data.description : '',
+      createdAt: data && data.createdAt ? data.createdAt : new Date(),
       updatedAt: new Date(),
-      firstname: this.firstname ? this.firstname : 'No firstname',
-      lastname: this.lastname ? this.lastname : '',
-      age: this.age ? this.age : null
+      firstname: data && data.firstname ? data.firstname : 'No firstname',
+      lastname: data && data.lastname ? data.lastname : '',
+      age: data && data.age ? data.age : null
     };
   }
+
+  // What to do when converting to database object, it needs UTC time etc. This should only happen when converting to database
+
+  // What to do with convert function to use in application, such as making Date times to moment times etc.
 
 
 }
